@@ -3,8 +3,7 @@
 A collection of agent **skills** I ([Wesley · @Ikemen666](https://github.com/Ikemen666)) built
 for real consulting / research / meeting work, shared so my teammates can use them too.
 
-> 本着「中国人 = open source」的精神 🙂 — these are mine, they're MIT-licensed, and you're
-> welcome to use them. Just keep the attribution.
+> 本着open source的精神 — these are mine, they're MIT-licensed, and you're welcome to use them. Just keep the attribution.
 
 ## License & attribution
 
@@ -49,7 +48,7 @@ the bundled `agent-reach` — see "Bring your own keys"):
 ## ⚠️ Bring your own API keys (no free ride 🙃)
 
 **None of these ship with my keys.** Every skill that touches a paid/free API expects *your own*.
-Even where the API is free, get your own — don't ride my effort.
+Even where the API is free, get your own — its worth the time and energy.
 
 | If you use… | You need to configure |
 |---|---|
