@@ -1,0 +1,22 @@
+# --- secrets & local config (NEVER commit) ---
+ingest-config.json
+**/ingest-config.json
+*.env
+.env
+**/config.json          # local API-key configs (templates are *.template.json and ARE tracked)
+!**/*.template.json
+
+# --- transcript-correct: keep only the safe base + the example dict ---
+# Your own project domain dicts hold real names/terms — keep them LOCAL, never push.
+skills/transcript-correct/references/dicts/*.json
+!skills/transcript-correct/references/dicts/general.json
+!skills/transcript-correct/references/dicts/example-project.json
+
+# --- caches / build / OS junk ---
+__pycache__/
+*.pyc
+.DS_Store
+venv/
+.venv/
+node_modules/
+*.log

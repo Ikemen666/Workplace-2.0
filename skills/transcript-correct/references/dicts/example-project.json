@@ -1,0 +1,38 @@
+{
+  "_comment": "EXAMPLE domain dict — copy this file to <your-project>.json and edit, then load it with `--domain <your-project>`. It is MERGED on top of general.json. Everything here is fictional; replace with YOUR meeting's real proper nouns, known ASR mistakes, and protected terms. Grow it as you spot recurring errors.",
+
+  "canonical": {
+    "_people_note": "Correct spellings of recurring names. The corrector snaps ambiguous ASR output to these.",
+    "people": [
+      "Jane Doe",
+      "John Smith",
+      "李明"
+    ],
+    "orgs": [
+      "Acme Corp",
+      "Globex"
+    ],
+    "terms": [
+      "Project Phoenix",
+      "OKR",
+      "go-to-market"
+    ]
+  },
+
+  "replacements": {
+    "_note": "Explicit wrong -> right substitutions, applied deterministically (longest key first). Put known ASR mishearings here.",
+    "阿克米": "Acme",
+    "凤凰项目": "Project Phoenix"
+  },
+
+  "replacements_wordbound": {
+    "_note": "Same as replacements but only match on word boundaries (good for short English tokens that would otherwise hit substrings).",
+    "okr": "OKR"
+  },
+
+  "protect": [
+    "_note: tokens here are never altered by any pass",
+    "Acme Corp",
+    "Project Phoenix"
+  ]
+}

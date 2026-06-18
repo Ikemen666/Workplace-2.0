@@ -1,0 +1,34 @@
+{
+  "_README": "Copy this file to ~/.openclaw/ingest-config.json and fill in your OWN api_keys. The ingest skills (extract-pdf, extract-xlsx, extract-video, gap-fill, distill) read keys and model routing from it. NEVER commit your filled-in copy — it contains live keys.",
+
+  "vault": {
+    "path": "~/Desktop/vault",
+    "attachment_subfolder": "attachments",
+    "sources_folder": "Sources",
+    "concepts_folder": "Concepts"
+  },
+
+  "dedup": { "enabled": true, "threshold": 90, "ambiguous_range": [80, 89] },
+  "gap_fill": { "budget": 5, "hard_cap": true },
+
+  "api_keys": {
+    "_note": "Bring your own. Each provider below needs the matching key. Get them from each provider's console.",
+    "DEEPSEEK_API_KEY": "YOUR_DEEPSEEK_KEY_HERE",
+    "GEMINI_API_KEY": "YOUR_GOOGLE_GEMINI_KEY_HERE",
+    "MOONSHOT_API_KEY": "YOUR_MOONSHOT_KIMI_KEY_HERE",
+    "DASHSCOPE_API_KEY": "YOUR_DASHSCOPE_KEY_HERE",
+    "TAVILY_API_KEY": "YOUR_TAVILY_KEY_HERE"
+  },
+
+  "models": {
+    "classify_source": { "model": "deepseek-chat",         "provider": "deepseek" },
+    "distill":         { "model": "gemini-2.5-pro",        "provider": "google" },
+    "distill_long":    { "model": "kimi-k2.5",             "provider": "moonshot" },
+    "pdf_vision":      { "model": "gemini-2.5-flash",      "provider": "google" },
+    "keyframe_caption":{ "model": "gemini-2.5-flash",      "provider": "google" },
+    "xlsx_narrate":    { "model": "deepseek-chat",         "provider": "deepseek" },
+    "gap_synthesis":   { "model": "gemini-2.5-flash",      "provider": "google" },
+    "concept_dedupe":  { "model": "deepseek-chat",         "provider": "deepseek" },
+    "asr_chinese":     { "model": "paraformer-realtime-v2","provider": "dashscope" }
+  }
+}
